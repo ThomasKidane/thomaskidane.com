@@ -5,8 +5,16 @@ import { marked } from 'marked';
 import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const filePath = path.join(process.cwd(), 'src/content/blog', `${params.slug}.md`);
+// Generate static params for all blog posts
+export async function generateStaticParams() {
+  const dir = path.join(process.cwd(), 'src/content/blog');
+  const files = fs.readdirSync(dir).filter(f => f.endsWith('.md'));
+  return files.map(file => ({ slug: file.replace(/\.md$/, '') }));
+}
+
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const filePath = path.join(process.cwd(), 'src/content/blog', `${slug}.md`);
   if (!fs.existsSync(filePath)) {
     return <div>Post not found</div>;
   }
@@ -22,7 +30,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           <Link href="/blog" className="glass-button px-4 py-2 rounded-full text-white font-medium hover:scale-105 transition-transform inline-block mb-6">
             ← Back to Blog
           </Link>
-          <h1 className="text-4xl font-bold text-white mb-4">{data.title || params.slug}</h1>
+          <h1 className="text-4xl font-bold text-white mb-4">{data.title || slug}</h1>
           <article className="prose prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </div>
