@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Linkedin, Instagram, Trophy, ArrowUpRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Portfolio() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -89,7 +90,7 @@ export default function Portfolio() {
                 <a href="#projects" className="text-white/[0.8] hover:text-white transition-colors">Projects</a>
                 <a href="#skills" className="text-white/[0.8] hover:text-white transition-colors">Skills</a>
                 <a href="#contact" className="text-white/[0.8] hover:text-white transition-colors">Contact</a>
-                <a href="/blog" className="text-white/[0.8] hover:text-white transition-colors">Blog</a>
+                <Link href="/blog" className="text-white/[0.8] hover:text-white transition-colors">Blog</Link>
               </div>
             </div>
           </div>
@@ -232,8 +233,8 @@ export default function Portfolio() {
               <div className="mb-2 text-white/[0.85]">Software Engineer</div>
               <ul className="list-disc ml-6 mt-2 text-white/[0.85] space-y-1">
                 <li>Architected and deployed a predictive credit rating system using Scikit-learn and MySQL, cutting manual scoring time by 70% and accelerating the loan approval process.</li>
-                <li>Developed the company's core FinTech web app, managing a 12-user beta launch to gather critical feedback and iterate on the product before its full release.</li>
-                <li>Initiated and secured a strategic partnership with Abyssinia Bank, the 2nd largest bank in the country, to underwrite the platform's financial services.</li>
+                <li>Developed the company&apos;s core FinTech web app, managing a 12-user beta launch to gather critical feedback and iterate on the product before its full release.</li>
+                <li>Initiated and secured a strategic partnership with Abyssinia Bank, the 2nd largest bank in the country, to underwrite the platform&apos;s financial services.</li>
               </ul>
             </div>
           </div>
