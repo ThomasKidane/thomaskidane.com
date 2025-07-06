@@ -104,7 +104,7 @@ export default function Portfolio() {
             <div className="flex flex-col items-center mb-6">
               <div className="w-32 h-32 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center glass-card overflow-hidden shadow-lg border-4 border-white/30 mb-4">
                 <Image
-                  src="/me1.PNG"
+                  src="/me1.png"
                   alt="Thomas Kidane profile photo"
                   width={128}
                   height={128}
