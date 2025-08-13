@@ -10,6 +10,7 @@ A stunning portfolio website featuring Apple's Liquid Glass effect, showcasing T
 - **Modern Tech Stack**: Next.js 15, TypeScript, and React 19
 - **Smooth Animations**: Elegant hover effects and transitions
 - **Professional Layout**: Clean, modern design perfect for showcasing skills
+- **Analytics & Insights**: Built-in Vercel Analytics for performance monitoring and user behavior tracking
 
 ## 🚀 Live Preview
 
@@ -154,6 +155,39 @@ For production deployment, consider setting:
 - `NEXT_PUBLIC_SITE_URL`: Your domain URL
 - Analytics tracking IDs
 - Contact form endpoints
+
+## 📊 Analytics & Tracking
+
+This portfolio includes **Vercel Analytics** for comprehensive website analytics:
+
+### What's Tracked Automatically
+- **Page Views**: Every page visit and navigation
+- **Performance Metrics**: Core Web Vitals, load times, and user experience data
+- **User Behavior**: Click patterns, scroll depth, and engagement metrics
+- **Geographic Data**: Visitor locations and traffic sources
+- **Device Information**: Browser types, operating systems, and screen sizes
+
+### Custom Event Tracking
+Use the analytics utility functions in `src/utils/analytics.ts`:
+
+```tsx
+import { trackButtonClick, trackLinkClick, trackPageView } from '@/utils/analytics';
+
+// Track button clicks
+trackButtonClick('contact_form_submit', { form_type: 'contact' });
+
+// Track link clicks
+trackLinkClick('github_profile', 'https://github.com/username');
+
+// Track custom page views
+trackPageView('project_details', { project: 'portfolio-website' });
+```
+
+### Analytics Dashboard
+- View analytics at [vercel.com/analytics](https://vercel.com/analytics)
+- Real-time data and historical trends
+- Performance insights and optimization recommendations
+- Privacy-compliant tracking (GDPR ready)
 
 ## 📞 Contact & Updates
 

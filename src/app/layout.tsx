@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: "Thomas Kidane - Portfolio",
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className="antialiased min-h-screen">
         {children}
+        <Analytics />
       </body>
     </html>
   );

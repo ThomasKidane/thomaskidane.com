@@ -212,7 +212,7 @@ export default function Portfolio() {
                 <li>Developed a comprehensive test suite to validate performance benchmarks and ensure system stability throughout the refactoring and migration process.</li>
               </ul>
             </div>
-            {/* Dunyatech */}
+            Dunyatech
             <div id="exp-dunyatech" className="glass-card rounded-3xl p-8 scroll-mt-32">
               <div className="flex items-center mb-2">
                 <a href="https://dunyatech.com/" target="_blank" rel="noopener noreferrer" className="text-2xl font-bold text-white hover:text-blue-300 transition-colors flex items-center gap-1">Dunyatech Technology <ArrowUpRight className="inline w-5 h-5 text-blue-300" /></a>
@@ -242,7 +242,7 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="relative z-10 px-6 py-20">
+      {/* <section id="projects" className="relative z-10 px-6 py-20">
         <div className="max-w-4xl mx-auto">
           <div className="glass-card rounded-3xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Projects</h2>
@@ -270,7 +270,7 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Skills & Interests Section */}
       <section id="skills" className="relative z-10 px-6 py-20">
